@@ -1,0 +1,302 @@
+[
+  {
+    "id": "1",
+    "location": "India, Tamil Nadu, Chennai, Marina Beach",
+    "latitude": 13.0497,
+    "longitude": 80.2825
+  },
+  {
+    "id": "2",
+    "location": "India, Tamil Nadu, Chennai, Guindy National Park",
+    "latitude": 13.0087,
+    "longitude": 80.2206
+  },
+  {
+    "id": "3",
+    "location": "India, Tamil Nadu, Chennai, Kapaleeshwarar Temple",
+    "latitude": 13.0339,
+    "longitude": 80.2707
+  },
+  {
+    "id": "4",
+    "location": "India, Tamil Nadu, Chennai, Santhome Basilica",
+    "latitude": 13.033588899999998, 
+    "longitude": 80.27773143324852
+  },
+  {
+    "id": "5",
+    "location": "India, Tamil Nadu, Chennai, Valluvar Kottam",
+    "latitude": 13.054204,
+    "longitude": 80.241811
+  },
+  {
+    "id": "6",
+    "location": "India, Tamil Nadu, Chennai, Fort St. George",
+    "latitude": 13.0796,
+    "longitude": 80.2870
+  },
+  {
+    "id": "7",
+    "location": "India, Tamil Nadu, Chennai, Government Museum",
+    "latitude": 13.071226,
+    "longitude": 80.257043
+  },
+  {
+    "id": "8",
+    "location": "India, Tamil Nadu, Chennai, Arignar Anna Zoological Park",
+    "latitude": 12.879501,
+    "longitude": 80.081321
+  },
+  {
+    "id": "9",
+    "location": "India, Tamil Nadu, Chennai, Marina Mall",
+    "latitude": 12.841246171697797, 
+    "longitude": 80.2285725760466
+  },
+  {
+    "id": "10",
+    "location": "India, Tamil Nadu, Chennai, Theosophical Society",
+    "latitude": 13.0067,
+    "longitude": 80.2586
+  },
+  {
+    "id": "11",
+    "location": "India, Tamil Nadu, Chennai, Birla Planetarium",
+    "latitude": 13.0118,
+    "longitude": 80.2350
+  },
+  {
+    "id": "12",
+    "location": "India, Tamil Nadu, Chennai, Elliot's Beach",
+    "latitude": 12.9984,
+    "longitude": 80.2717
+  },
+  {
+    "id": "13",
+    "location": "India, Tamil Nadu, Chennai, Semmozhi Poonga",
+    "latitude": 13.0579,
+    "longitude": 80.2577
+  },
+  {
+    "id": "14",
+    "location": "India, Tamil Nadu, Chennai, Guindy Race Course",
+    "latitude": 13.0081,
+    "longitude": 80.2163
+  },
+  {
+    "id": "15",
+    "location": "India, Tamil Nadu, Chennai, Thousand Lights Mosque",
+    "latitude": 13.0582,
+    "longitude": 80.2564
+  },
+  {
+    "id": "16",
+    "location": "India, Tamil Nadu, Chennai, Ripon Building",
+    "latitude": 13.0836,
+    "longitude": 80.2766
+  },
+  {
+    "id": "17",
+    "location": "India, Tamil Nadu, Chennai, Vadapalani Murugan Temple",
+    "latitude": 13.052511638286276,
+    "longitude": 80.2135854789986
+  },
+  {
+    "id": "18",
+    "location": "India, Tamil Nadu, Chennai, Chennai Central Railway Station",
+    "latitude": 13.0839,
+    "longitude": 80.2785
+  },
+  {
+    "id": "19",
+    "location": "India, Tamil Nadu, Chennai, VGP Universal Kingdom",
+    "latitude": 12.9156,
+    "longitude": 80.2272
+  },
+  {
+    "id": "20",
+    "location": "India, Tamil Nadu, Chennai, Spencer Plaza",
+    "latitude": 13.0589,
+    "longitude": 80.2637
+  },
+  {
+    "id": "21",
+    "location": "India, Tamil Nadu, Chennai, Parthasarathy Temple",
+    "latitude": 13.0553,
+    "longitude": 80.2672
+  },
+  {
+    "id": "22",
+    "location": "India, Tamil Nadu, Chennai, T Nagar",
+    "latitude": 13.0415,
+    "longitude": 80.2337
+  },
+  {
+    "id": "23",
+    "location": "India, Tamil Nadu, Chennai, MGR Film City",
+    "latitude": 12.9278,
+    "longitude": 80.1525
+  },
+  {
+    "id": "24",
+    "location": "India, Tamil Nadu, Chennai, Chennai Snake Park",
+    "latitude": 13.0804,
+    "longitude": 80.2382
+  },
+  {
+    "id": "25",
+    "location": "India, Tamil Nadu, Chennai, Royapuram Fishing Harbour",
+    "latitude": 13.1141,
+    "longitude": 80.2922
+  },
+  {
+    "id": "26",
+    "location": "India, Tamil Nadu, Chennai, The Forum Vijaya Mall",
+    "latitude": 13.0524,
+    "longitude": 80.2204
+  },
+  {
+    "id": "27",
+    "location": "India, Tamil Nadu, Chennai, Shirdi Sai Baba Temple",
+    "latitude": 13.0083,
+    "longitude": 80.2202
+  },
+  {
+    "id": "28",
+    "location": "India, Tamil Nadu, Chennai, M.A. Chidambaram Stadium",
+    "latitude": 13.0620,
+    "longitude": 80.2794
+  },
+  {
+    "id": "29",
+    "location": "India, Tamil Nadu, Chennai, Government Estate",
+    "latitude": 13.0726,
+    "longitude": 80.2595
+  },
+  {
+    "id": "30",
+    "location": "India, Tamil Nadu, Chennai, Armenian Church",
+    "latitude": 13.0674,
+    "longitude": 80.2670
+  },
+  {
+    "id": "31",
+    "location": "India, Tamil Nadu, Chennai, Cholamandal Artists' Village",
+    "latitude": 12.8661,
+    "longitude": 80.2492
+  },
+  {
+    "id": "32",
+    "location": "India, Tamil Nadu, Chennai, Vandalur",
+    "latitude": 12.8913,
+    "longitude": 80.0832
+  },
+  {
+    "id": "33",
+    "location": "India, Tamil Nadu, Chennai, St. Thomas Mount",
+    "latitude": 12.9908,
+    "longitude": 80.1873
+  },
+  {
+    "id": "34",
+    "location": "India, Tamil Nadu, Chennai, Madras High Court",
+    "latitude": 13.0878,
+    "longitude": 80.2785
+  },
+  {
+    "id": "35",
+    "location": "India, Tamil Nadu, Chennai, Mylapore",
+    "latitude": 13.0339,
+    "longitude": 80.2707
+  },
+  {
+    "id": "36",
+    "location": "India, Tamil Nadu, Chennai, Guindy Industrial Estate",
+    "latitude": 13.0110,
+    "longitude": 80.2180
+  },
+  {
+    "id": "37",
+    "location": "India, Tamil Nadu, Chennai, Poonamallee",
+    "latitude": 13.0515,
+    "longitude": 80.1083
+  },
+  {
+    "id": "38",
+    "location": "India, Tamil Nadu, Chennai, St. Mary's Church",
+    "latitude": 13.0807,
+    "longitude": 80.2829
+  },
+  {
+    "id": "39",
+    "location": "India, Tamil Nadu, Chennai, Chennai Trade Centre",
+    "latitude": 13.0077,
+    "longitude": 80.2098
+  },
+  {
+    "id": "40",
+    "location": "India, Tamil Nadu, Chennai, Chetpet Lake",
+    "latitude": 13.0651,
+    "longitude": 80.2437
+  },
+  {
+    "id": "41",
+    "location": "India, Tamil Nadu, Chennai, Mambalam",
+    "latitude": 13.0348,
+    "longitude": 80.2314
+  },
+  {
+    "id": "42",
+    "location": "India, Tamil Nadu, Chennai, Madhya Kailash Temple",
+    "latitude": 12.9946,
+    "longitude": 80.2498
+  },
+  {
+    "id": "43",
+    "location": "India, Tamil Nadu, Chennai, Chennai International Airport",
+    "latitude": 12.980834,
+    "longitude": 80.164254
+  },
+  {
+    "id": "44",
+    "location": "India, Tamil Nadu, Chennai, Tidel Park",
+    "latitude": 12.9876,
+    "longitude": 80.2525
+  },
+  {
+    "id": "45",
+    "location": "India, Tamil Nadu, Chennai, Nungambakkam",
+    "latitude": 13.0610,
+    "longitude": 80.2407
+  },
+  {
+    "id": "46",
+    "location": "India, Tamil Nadu, Chennai, Periyar Science and Technology Centre",
+    "latitude": 13.0177,
+    "longitude": 80.2532
+  },
+  {
+    "id": "47",
+    "location": "India, Tamil Nadu, Chennai, The Leela Palace",
+    "latitude": 13.0210,
+    "longitude": 80.2569
+  },
+  {
+    "id": "48",
+    "location": "India, Tamil Nadu, Chennai, Phoenix Market City",
+    "latitude": 12.9912,
+    "longitude": 80.2157
+  },
+  {
+    "id": "49",
+    "location": "India, Tamil Nadu, Chennai, Royapuram",
+    "latitude": 13.1103,
+    "longitude": 80.2952
+  },
+  {
+    "id": "50",
+    "location": "India, Tamil Nadu, Chennai, Egmore Museum",
+    "latitude": 13.0766,
+    "longitude": 80.2606
+  }
+]
