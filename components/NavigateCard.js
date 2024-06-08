@@ -2,32 +2,26 @@ import {
   SafeAreaView,
   StyleSheet,
   Text,
-  TextInput,
   TouchableOpacity,
   View,
 } from "react-native";
 import React from "react";
 import tw from "tailwind-react-native-classnames";
-import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import { useNavigation } from "@react-navigation/native";
 import mockData from "../API/map.json";
 import SeachFilter from "./SeachFilter";
-import { useDispatch } from "react-redux";
-import {
-  selectDestination,
-  setDestination,
-  setOrigin,
-} from "../slices/navSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { selectDestination, setDestination } from "../slices/navSlice";
 import NavFavorite from "./NavFavorite";
 import { Icon } from "@rneui/base";
 
 const NavigateCard = () => {
   const Navigation = useNavigation();
   const dispatch = useDispatch();
+  const destination = useSelector(selectDestination);
 
   const handleSelect = (data) => {
     dispatch(setDestination(data));
-    Navigation.navigate("RideOptionCard");
   };
   return (
     <SafeAreaView style={tw`bg-white flex-1 p-5`}>
@@ -44,8 +38,11 @@ const NavigateCard = () => {
       </View>
       <View style={Styles.container}>
         <TouchableOpacity
+          disabled={!destination}
           onPress={() => Navigation.navigate("RideOptionCard")}
-          style={tw`flex flex-row justify-between bg-black w-24 px-4 py-3 rounded-full`}
+          style={tw`flex flex-row justify-between bg-black w-24 px-4 py-3 rounded-full ${
+            !destination && "opacity-20"
+          }`}
         >
           <Icon name="car" type="antdesign" color={"white"} size={16} />
           <Text style={tw`text-white text-center`}>Ride</Text>
@@ -65,7 +62,6 @@ export default NavigateCard;
 
 const Styles = StyleSheet.create({
   container: {
-    // display: "flex",
     flexDirection: "row",
     backgroundColor: "white",
     justifyContent: "space-evenly",

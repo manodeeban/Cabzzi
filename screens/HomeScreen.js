@@ -1,9 +1,15 @@
-import { Button, Image, SafeAreaView, StyleSheet, View } from "react-native";
-import React, { useEffect } from "react";
+import {
+  Image,
+  SafeAreaView,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import React from "react";
 import tw from "tailwind-react-native-classnames";
 import NavOption from "../components/NavOption";
 import { useDispatch } from "react-redux";
-import { setDestination, setLocateOnMap, setOrigin } from "../slices/navSlice";
+import { setDestination, setOrigin } from "../slices/navSlice";
 import SeachFilter from "../components/SeachFilter";
 import mockData from "../API/map.json";
 import { useNavigation } from "@react-navigation/native";
@@ -41,9 +47,12 @@ const HomeScreen = () => {
           mockData={mockData}
           onSelectItem={handleSelect}
         />
-        <View style={styles.button}>
-          <Button title="Locate On Map" color={"black"} onPress={handleClick} />
-        </View>
+        <TouchableOpacity
+          style={tw`bg-black p-3 mt-2 rounded-md`}
+          onPress={handleClick}
+        >
+          <Text style={tw`text-white text-center`}>Locate On Map</Text>
+        </TouchableOpacity>
         <NavOption />
         <NavFavorite />
       </View>
@@ -52,12 +61,3 @@ const HomeScreen = () => {
 };
 
 export default HomeScreen;
-
-const styles = StyleSheet.create({
-  text: {
-    color: "blue",
-  },
-  button: {
-    marginTop: 10,
-  },
-});
