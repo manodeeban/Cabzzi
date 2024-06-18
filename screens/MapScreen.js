@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, TouchableOpacity, View } from "react-native";
 import React, { useEffect, useRef, useState } from "react";
 import tw from "tailwind-react-native-classnames";
 import Maps from "../components/Maps";
@@ -8,17 +8,11 @@ import RideOptionCard from "../components/RideOptionCard";
 import { Icon } from "@rneui/base";
 import * as Location from "expo-location";
 import { useSelector } from "react-redux";
-import {
-  selectDestination,
-  selectLocateOnMap,
-  selectOrigin,
-} from "../slices/navSlice";
+import { selectLocateOnMap } from "../slices/navSlice";
 
 const MapScreen = () => {
   const Stack = createNativeStackNavigator();
-  const maplocation = useSelector(selectLocateOnMap);
-  const origin = useSelector(selectOrigin);
-  const destination = useSelector(selectDestination);
+  // const maplocation = useSelector(selectLocateOnMap);
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
   const mapRef = useRef(null);
@@ -35,19 +29,12 @@ const MapScreen = () => {
     };
     getLocation();
   }, []);
-  // useEffect(() => {
-  //   if (!origin || destination) return;
-  //   mapRef.current.fitToSuppliedMarkers(["origin", "destination"], {
-  //     edgePadding: { top: 50, right: 50, left: 50, bottm: 50 },
-  //     animated: true,
-  //   });
-  // }, [origin, destination]);
 
-  useEffect(() => {
-    if (maplocation) {
-      centerOnUserLocation();
-    }
-  }, [maplocation]);
+  // useEffect(() => {
+  //   if (maplocation) {
+  //     centerOnUserLocation();
+  //   }
+  // }, [maplocation]);
 
   const fitMarkers = () => {
     if (mapRef.current) {
@@ -62,14 +49,13 @@ const MapScreen = () => {
     let location = await Location.getCurrentPositionAsync({});
     // setLocation(location.coords);
     mapRef.current.animateToRegion({
-      latitude: maplocation ? maplocation.latitude : location.coords.latitude,
-      longitude: maplocation
-        ? maplocation.longitude
-        : location.coords.longitude,
+      latitude: location.coords.latitude,
+      longitude: location.coords.longitude,
       latitudeDelta: 0.0922,
       longitudeDelta: 0.0421,
     });
   };
+
   return (
     <View>
       <View style={tw`h-1/2`}>

@@ -14,6 +14,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MapScreen from "./screens/MapScreen";
 import EatsScreen from "./screens/EatsScreen";
+import ConfirmBooking from "./screens/ConfirmBooking";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -40,6 +41,11 @@ export default function App() {
               <Stack.Screen
                 name="EatsScreen"
                 component={EatsScreen}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="ConfirmBooking"
+                component={ConfirmBooking}
                 options={{ headerShown: false }}
               />
             </Stack.Navigator>

@@ -6,16 +6,18 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import tw from "tailwind-react-native-classnames";
 import { Image } from "@rneui/themed/dist/Image";
 import { Icon } from "@rneui/themed";
 import { useNavigation } from "@react-navigation/native";
-import { useSelector } from "react-redux";
-import { selectTravelTimeInfo } from "../slices/navSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { selectTravelTimeInfo, setConfirmData } from "../slices/navSlice";
 import { calculateFare } from "../utils/Utils";
+import LottieView from "lottie-react-native";
 
 const RideOptionCard = () => {
+  const dispatch = useDispatch();
   const BASE_FARE = 60; // Base fare in INR
   const FARE_UPTO_20KM = 12; // Fare per km for the first 20 km in INR
   const FARE_AFTER_20KM = 18; // Fare per km after 20 km in INR
@@ -29,6 +31,8 @@ const RideOptionCard = () => {
   );
 
   const [selected, setSelected] = useState(null);
+
+  console.log(selected, "dihif");
   const data = [
     {
       id: 1,
@@ -49,6 +53,11 @@ const RideOptionCard = () => {
       image: require("../assets/RideCard3.png"),
     },
   ];
+  useEffect(() => {
+    if (selected) {
+      dispatch(setConfirmData(selected));
+    }
+  }, [selected]);
 
   return (
     <SafeAreaView style={tw`flex-1 bg-white flex-grow`}>
@@ -63,47 +72,49 @@ const RideOptionCard = () => {
           Select a Ride - {traveldetail?.distance}km
         </Text>
       </View>
-      <View style={{ height: 285 }}>
+      <View style={tw`h-4/5`}>
         <FlatList
           data={data}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (
-            <TouchableOpacity
-              onPress={() => setSelected(item)}
-              style={tw`flex-row justify-between items-center px-10 ${
-                item.id === selected?.id && "bg-gray-200"
-              }`}
-            >
-              <Image
-                style={{ width: 100, height: 100, resizeMode: "contain" }}
-                source={item.image}
-              />
-              <View style={tw`-ml-6`}>
-                <Text style={tw`text-xl font-semibold`}>{item.title}</Text>
-                <Text>{traveldetail?.time.formatted} Travel time</Text>
-              </View>
-              <Text style={tw`text-xl`}>
-                {new Intl.NumberFormat("en-IN", {
-                  style: "currency",
-                  currency: "INR",
-                  minimumFractionDigits: 0,
-                  maximumFractionDigits: 0,
-                }).format(totalFare * item.multiplier)}
-              </Text>
-            </TouchableOpacity>
-          )}
+          renderItem={({ item }) => {
+            const fare = totalFare * item.multiplier;
+            const formattedFare = new Intl.NumberFormat("en-IN", {
+              style: "currency",
+              currency: "INR",
+              minimumFractionDigits: 0,
+              maximumFractionDigits: 0,
+            }).format(fare);
+            return (
+              <TouchableOpacity
+                onPress={() => setSelected({ ...item, fare: formattedFare })}
+                style={tw`flex-row justify-between items-center px-10 ${
+                  item.id === selected?.id && "bg-gray-200"
+                }`}
+              >
+                <Image
+                  style={{ width: 100, height: 100, resizeMode: "contain" }}
+                  source={item.image}
+                />
+                <View style={tw`-ml-6`}>
+                  <Text style={tw`text-xl font-semibold`}>{item.title}</Text>
+                  <Text>{traveldetail?.time.formatted} Travel time</Text>
+                </View>
+                <Text style={tw`text-xl`}>{formattedFare}</Text>
+              </TouchableOpacity>
+            );
+          }}
         />
-      </View>
-
-      <View style={tw`mb-20`}>
-        <TouchableOpacity
-          disabled={!selected}
-          style={tw`bg-black py-3 m-3 ${!selected && "bg-gray-300"}`}
-        >
-          <Text style={tw`text-center text-white text-xl`}>
-            Choose {selected?.title}
-          </Text>
-        </TouchableOpacity>
+        <View>
+          <TouchableOpacity
+            onPress={() => Navigation.navigate("ConfirmBooking")}
+            disabled={!selected}
+            style={tw`bg-black py-3 m-3 ${!selected && "bg-gray-300"}`}
+          >
+            <Text style={tw`text-center text-white text-xl`}>
+              Choose {selected?.title}
+            </Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </SafeAreaView>
   );

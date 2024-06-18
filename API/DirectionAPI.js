@@ -1,13 +1,8 @@
-// graphHopperAPI.js
-
-const apiUrl = "https://graphhopper.com/api/1/route";
-const apiKey = "b16b1d60-3c8c-4cd6-bae6-07493f23e589";
-
 const fetchRoute = async (payload) => {
   const inputPayload = {
     points: payload,
     snap_preventions: ["motorway", "ferry", "tunnel"],
-    details: ["road_class", "surface","time"],
+    details: ["road_class", "surface", "time"],
     // "alternative_route.max_paths": 3,
     // algorithm: "alternative_route",
     profile: "car",
@@ -17,7 +12,7 @@ const fetchRoute = async (payload) => {
     points_encoded: false,
   };
   try {
-    const response = await fetch(`${apiUrl}?key=${apiKey}`, {
+    const response = await fetch(`${process.env.API_URL}?key=${process.env.APP_API_KEY}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
